@@ -1,60 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (){
     const projetos = [
         {
-            titulo: "Psicologia Organizacional",
-            descricao: "Nas aulas de Psicologia Organizacional, entendi mais sobre comportamento humano, aprender a se comunicar e relações interpessoais e dinâmicas de grupo no ambiente de trabalho",
-            imagem: "https://media.licdn.com/dms/image/D4D12AQFv3cbLiJL-6Q/article-cover_image-shrink_720_1280/0/1678231273775?e=2147483647&v=beta&t=4qyGS1N5ZoSZL9ZsFprEom_lgg7WdY16p-IPr5DYhOM",
-        },
-
-        {
-            titulo: "Análise de Sistemas",
-            descricao: "Nas aulas de Analise de sistema consegui adquirir certas habilidades para projetar e desenvolver sistemas de informação eficientes. Aprendi requisitos do software, criar os diagramas e modelos de banco de dados.",
-            imagem: "https://unifacig.edu.br/wp-content/uploads/2023/05/ANALISE-DE-SISTEMAS.jpg",
-        },
-       
-        {
             titulo: "Computação Gráfica",
-            descricao: "Computação gráfica me permitiu explorar novas experiências e habilidades em photoshop e illustrador, o que me permitiu criar varias edições. Tento sempre estar em busca de novos desafios ",
-            imagem: "https://img.freepik.com/fotos-premium/beleza-atemporal-da-arte-da-computacao-grafica_893610-6963.jpg",
-    
+            descricao: "Sou uma designer gráfico apaixonado por criar projetos visualmente impactantes. Possuo habilidades avançadas em Photoshop e Illustrator, o que me permite criar desde edições complexas de imagens até ilustrações vetoriais criativas. Estou sempre em busca de novos desafios e oportunidades para colocar minha criatividade em prática!",
+            imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj60pyKAJKFrC_3ScwzitAv1uOR19tQsVQJOZPMPDf1LN92MKiFJ6tAbHiTWw9NNWxi2Y&usqp=CAU",
+            observacao: "Este trabalho foi desenvolvido como parte de uma atividade na qual tínhamos o desafio de substituir o rosto de uma pessoa por outro e criar uma marca fictícia para um produto. Decidi criar a marca de maquiagem de uma influenciadora que admiro muito. A partir dessa proposta, utilizei minhas habilidades em Photoshop e Illustrator para criar a imagem apresentada.",
+        },
+        {
+            titulo: "Analise de Sistemas",
+            descricao: "No curso de Análise de Sistemas, adquiri habilidades essenciais para entender, projetar e desenvolver sistemas de informação eficientes. Aprendi a identificar requisitos de software, criar diagramas e modelos de dados, e projetar interfaces de usuário intuitivas. Compreendi a importância da comunicação eficaz com os clientes.",
+            imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUF8PA6oE6VW_chL6H1CAFwWFMRc2cLNLkhSJp4F20GWaVuJbWDi6hkufxtQWPXhf0DKw&usqp=CAU",
+        },
+        {
+            titulo: "Psicologia Organizacional ",
+            descricao: "Na disciplina de Psicologia Organizacional na TI, aprendi sobre comportamento humano, relações interpessoais e dinâmica de grupos no ambiente de trabalho. Compreendi a importância da motivação, liderança e trabalho em equipe, além de temas como gestão de mudanças e resolução de conflitos.",
+            imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2QCzR0jpgBZRPxORsPH9kCwLFZqFGZ60lQQ48apa-kg&s",
         },
     ];
-
-    const projetoPlaceholder = document.getElementById("projeto-placeholder");
+  
+    const listaProjetos = document.getElementById("lista-projetos");
+    const conteudoExibido = document.getElementById("conteudo-exibido");
     const tituloConteudo = document.getElementById("titulo-conteudo");
     const descricaoConteudo = document.getElementById("descricao-conteudo");
     const imagemConteudo = document.getElementById("imagem-conteudo");
     const observacaoConteudo = document.getElementById("observacao-conteudo");
-
-    function mostrarProjeto(index) {
-        const projeto = projetos[index];
-        if (projeto) {
-            tituloConteudo.textContent = projeto.titulo;
-            descricaoConteudo.textContent = projeto.descricao;
-            imagemConteudo.src = projeto.imagem;
-            observacaoConteudo.textContent = projeto.observacao || "";
-
-            document.getElementById("conteudo-exibido").style.display = "block";
-        }
-    }
-
-    projetos.forEach((projeto, index) => {
+  
+    projetos.forEach((projeto) => {
+        const ul = document.createElement("ul");
         const button = document.createElement("button");
         button.textContent = projeto.titulo;
-        button.onclick = function () {
-            mostrarProjeto(index);
-        };
-        projetoPlaceholder.appendChild(button);
-        
+        button.addEventListener("click", function () {
+            tituloConteudo.textContent = projeto.titulo;
+            descricaoConteudo.textContent = projeto.descricao;
+            imagemConteudo.setAttribute("src", projeto.imagem);
+            observacaoConteudo.textContent = projeto.descricao;
+  
+            conteudoExibido.style.display = "block"; 
+        });
+        ul.appendChild(button);
+        listaProjetos.appendChild(ul);
     });
-    li.appendChild(button);
-    listaProjetos.appendChild(li);
-    
-
     window.onclick = function (event) {
-        if (event.target === document.getElementById("conteudo-exibido")) {
-            document.getElementById("conteudo-exibido").style.display = "none";
+        if (event.target == conteudoExibido) {
+            conteudoExibido.style.display = "none";
         }
-        
     };
-});
+  });
