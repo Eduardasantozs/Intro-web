@@ -1,40 +1,44 @@
-‹!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-‹meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Pessoal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-    <script type="text/javascript" src="server.js"></script>
-    
-    <body>
-        <header><h2>Currículo do Desenvolvedor</h2></header>
-    <div class="sidebar"> 
-      
-        <div id="lista-projetos"><h1>Meus Projetos</h1></div>
-        
+<body>
+  <header>
+    <h1>Currículo do Desenvolvedor</h1>
+  </header>
 
-    </div>  
-      
-        </div>
-        <main>
-        <section id="info-pessoal">
-           <p>Nome: Maria Eduarda Santos </p>
-          <p>Telefone: (51) 99260-8140</p>
-      <p>email: eduarda04santos18@gmail.com</p>
-        </section>
-        <section id="conteudo-exibido" styles="Display: none;">
-            <h2 id="titulo-conteudo"></h2>
-            <p id="descricao-conteudo"></p>
-            <img id="imagem-conteudo"></img> 
-        </section>
-        <section id="sobre">
-            <h2>Sobre mim</h2>
- <p>Ola, sou a maria eduarda tenho 17 anos estou no segundo ano do ensino medio e cursando</p>
-<p> tecnico de informatica, tenho conhecimento em java,javascript, orientação a objetos, html e css</p>
-<p> pretendo entrar no mundo da tecnologia com foco em programação!</p>
+  <aside id="lista-projetos">
+  </aside>
+
+  <main>
+    <section id="conteudo-exibido" style="display: none;">
+    </section>
+
+    <section class="informacoes-pessoais" style="display: flex; padding: 40px;">
      
-        </section>
-    </main> 
+        <h2>Informações Pessoais</h2>
+        <h3>Maria Eduarda Santos</h3>
+        <p>Email: eduarda04santos18@gmail.com</p>
+        <p>Telefone: (51) 99260-8140</p>
+    <section id="sobre">
+      <h5>Sobre Mim</h5>
+ <p>Ola, sou a maria eduarda tenho 17 anos estou no segundo ano do ensino medio e cursando</p>
+<p> tecnico de informatica, tenho conhecimento em java,javascript, orientação a objetos, html e css </p> e css</p>
+<p> pretendo entrar no mundo da tecnologia com foco em programação!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+  <script src="server.js"></script>
+
 </body>
+
+</html>
