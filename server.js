@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       titulo: "Projeto 3",
-      descricao: "Calculadora de livro,feito em html, css e javascript",
+      descricao: "Calculadora feita em html, css e javascript",
       imagem: " https://images.app.goo.gl/L3JpXDGVhavAdkXs8",
     }
   ];
