@@ -1,35 +1,35 @@
-/*margem para o body e html */
+
 body, html {
   margin: 0;
 }
 
 header {
+  position: fixed;
   background-color: #333;
   color: #fff;
+  width: 100%;
   padding: 20px 0;
   text-align: center;
-  position: fixed;
-  width: 100%;
   top: 0;
 }
 
 aside {
-  background-color: #7d7b7b;
-  width: 190px;
   position: fixed;
+  width: 190px;
+  overflow-y: auto;
   top: 121px;
   bottom: 0;
-  overflow-y: auto;
   padding: 20px;
+  background-color: #7d7b7b;
 }
 
 main {
+  margin-bottom: 90px;
   margin-top: 100px; 
   margin-left: 220px; 
   padding: 30px;
   background-color: black;
   color: white;
-  margin-bottom: 90px;
 }
 
 button {
@@ -37,23 +37,22 @@ button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: black;
-  color: #fff;
   border: none;
   cursor: pointer;
-  transition: .2s;
+  background-color: black;
+  color: #fff;
 }
 
 #conteudo-exibido {
-  margin-top: 20px;
   display: none; 
+   margin-top: 30px;
 }
 .informacoes-pessoais {
   display: flex;
-  padding: 40px;
+  padding: 35px;
 }
 
-.informacoes-pessoais > div {
+.informacoes-pessoais {
   flex-grow: 1;
 }
 
@@ -61,7 +60,7 @@ button {
     flex-direction: column;
     align-items: center;
   }
-  .informacoes-pessoais > div {
+  .informacoes-pessoais {
     margin-bottom: 20px;
   }
 
@@ -70,13 +69,13 @@ button {
   text-align: right;
 }
 footer {
+  position: fixed;
   text-align: center;
+   width: 100%;
   padding: 20px 0;
   background-color: #333;
   color: #fff;
-  position: fixed;
   bottom: 0;
-  width: 100%;
 }
 img {
   max-width: 100%; 
