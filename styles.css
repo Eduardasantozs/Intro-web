@@ -1,82 +1,104 @@
 
-body, html {
-  margin: 0;
+.imagem {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
 }
 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
 header {
-  position: fixed;
-  background-color: #333;
-  color: #fff;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  top: 0;
+    background-color: #02467e;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
 }
 
-aside {
-  position: fixed;
-  width: 190px;
-  overflow-y: auto;
-  top: 121px;
-  bottom: 0;
-  padding: 20px;
-  background-color: #7d7b7b;
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar {
+    background-color: #0083cf;
+    padding: 20px;
+    color: #dfd9d9;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-bottom: 7px;
+    background-color: #ccc;
+    position: sticky;
+    color: #ffffff;
+    top: 0;
+    height: 100vh;
+    padding: 10px;
 }
 
 main {
-  margin-bottom: 90px;
-  margin-top: 100px; 
-  margin-left: 220px; 
-  padding: 30px;
-  background-color: black;
-  color: white;
+    margin-left: 220px;
+    padding: 20px;
+    padding-top: 70px; 
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: black;
-  color: #fff;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-#conteudo-exibido {
-  display: none; 
-   margin-top: 30px;
-}
-.informacoes-pessoais {
-  display: flex;
-  padding: 35px;
+button {
+    background-color: #71bfdf; 
+    color: white; 
+    padding: 15px 30px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
-.informacoes-pessoais {
-  flex-grow: 1;
+button:hover {
+    background-color: #0080bb; 
 }
 
- .informacoes-pessoais {
-    flex-direction: column;
-    align-items: center;
-  }
-  .informacoes-pessoais {
-    margin-bottom: 20px;
-  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-#sobre {
-  margin-top: 20px;
-  text-align: right;
-}
-footer {
-  position: fixed;
-  text-align: center;
-   width: 100%;
-  padding: 20px 0;
-  background-color: #333;
-  color: #fff;
-  bottom: 0;
-}
-img {
-  max-width: 100%; 
+header {
+    background-color: #02467e;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+ 
 }
