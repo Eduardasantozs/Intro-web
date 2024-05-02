@@ -17,40 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
       imagem: " https://images.app.goo.gl/L3JpXDGVhavAdkXs8",
     }
   ];
-
-  const listarProjetos = document.getElementById("listar-projetos");
-  const conteudoExibido = document.getElementById("conteudo-exibido");
-
-  projetos.forEach((projeto) => {
-    const button = document.createElement("button");
-    button.textContent = projeto.titulo;
-
-    button.addEventListener("click", function () {
-      const titulo = document.createElement("h2");
-      titulo.textContent = projeto.titulo;
-
-      const descricao = document.createElement("p");
-      descricao.textContent = projeto.descricao;
-
-      const imagem = document.createElement("img");
-      imagem.setAttribute("src", projeto.imagem);
-
-
-
-      conteudoExibido.innerHTML = ''; 
-      conteudoExibido.appendChild(titulo);
-      conteudoExibido.appendChild(descricao);
-      conteudoExibido.appendChild(imagem);
-
-
-      conteudoExibido.style.display = "block"; });
-
-    listaProjetos.appendChild(button);
+  
+    const listaProjetos = document.getElementById("lista-projetos");
+    const conteudoExibido = document.getElementById("conteudo-exibido");
+    const tituloConteudo = document.getElementById("titulo-conteudo");
+    const descricaoConteudo = document.getElementById("descricao-conteudo");
+    const imagemConteudo = document.getElementById("imagem-conteudo");
+    const observacaoConteudo = document.getElementById("observacao-conteudo");
+  
+    projetos.forEach((projeto) => {
+        const ul = document.createElement("ul");
+        const button = document.createElement("button");
+        button.textContent = projeto.titulo;
+        button.addEventListener("click", function () {
+            tituloConteudo.textContent = projeto.titulo;
+            descricaoConteudo.textContent = projeto.descricao;
+            imagemConteudo.setAttribute("src", projeto.imagem);
+            observacaoConteudo.textContent = projeto.descricao;
+  
+            conteudoExibido.style.display = "block"; 
+        });
+        ul.appendChild(button);
+        listaProjetos.appendChild(ul);
+    });
+    window.onclick = function (event) {
+        if (event.target == conteudoExibido) {
+            conteudoExibido.style.display = "none";
+        }
+    };
   });
-
-   window.onclick = function (event) {
-    if (event.target == conteudoExibido) {
-      conteudoExibido.style.display = "none";
-    }
-  };
-});
+  
