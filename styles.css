@@ -1,85 +1,83 @@
+/*margem para o body e html */
+body, html {
+  margin: 0;
+}
+
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #05366e;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
-.sidebar {
-    background-color: #3e7caf;
-    padding: 20px ;
-    width: 200px ;
-    height: 900px ;
+
+aside {
+  background-color: #7d7b7b;
+  width: 190px;
+  position: fixed;
+  top: 121px;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 20px;
 }
-.sidebar h2 {
-    margin-bottom: 80px;
-}
+
 main {
-    margin-left: 255px;
-    padding: 0px;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-#projeto-placeholder button {
-    display: block;
-    margin-bottom: 50px;
-    width: 100%;
-    padding: 10px;
-    background-color: #93b9eb;
-    text-align:justify;
-}
-#content{
-    position: fixed;
-    top: 16%;
-    left: 0%
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 70%;
-    box-shadow: 0 0 10px rgba(81, 80, 80, 0.1); 
-
-
-}
-#info-p {
-    position: fixed;
-    top: 16%;
-    left: 0%
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 70%;
-    box-shadow: 0 0 10px rgba(81, 80, 80, 0.1); 
+  margin-top: 100px; 
+  margin-left: 220px; 
+  padding: 30px;
+  background-color: black;
+  color: white;
+  margin-bottom: 90px;
 }
 
-#sobre{
-
-    position: fixed;
-    top: 50%;
-    left: 0%
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    width: 70%;
-    box-shadow: 0 0 10px rgba(81, 80, 80, 0.1); 
-
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
 }
 
 #conteudo-exibido {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(81, 80, 80, 0.1); 
-    max-width: 100%; 
+  margin-top: 20px;
+  display: none; 
+}
+.informacoes-pessoais {
+  display: flex;
+  padding: 40px;
 }
 
-#imagem-conteudo {
-    max-width: 50%;
-    height: auto; 
-  
+.informacoes-pessoais > div {
+  flex-grow: 1;
+}
+
+ .informacoes-pessoais {
+    flex-direction: column;
+    align-items: center;
+  }
+  .informacoes-pessoais > div {
+    margin-bottom: 20px;
+  }
+
+#sobre {
+  margin-top: 20px;
+  text-align: right;
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+img {
+  max-width: 100%; 
 }
